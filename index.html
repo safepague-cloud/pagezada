@@ -3,34 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Conexões Reais | Relações saudáveis, autoestima e bem-estar emocional</title>
+  <title>Conexões Reais | Blog e notícias sobre autoestima, respeito e bem-estar</title>
   <meta
     name="description"
-    content="Conexões Reais é um blog educativo para jovens sobre comunicação saudável, respeito nas relações, autoestima e bem-estar emocional."
+    content="Conexões Reais é um blog educativo em formato de notícias e artigos para jovens sobre comunicação saudável, respeito nas relações, autoestima e bem-estar emocional."
   />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Conexões Reais | Relações saudáveis, autoestima e bem-estar emocional" />
+  <meta property="og:title" content="Conexões Reais | Blog e notícias sobre autoestima, respeito e bem-estar" />
   <meta
     property="og:description"
-    content="Um blog educativo com conteúdos acessíveis sobre comunicação saudável, autoestima, respeito e desenvolvimento pessoal."
+    content="Um portal educativo com artigos e notícias sobre comunicação saudável, autoestima, respeito e desenvolvimento pessoal."
   />
   <meta property="og:locale" content="pt_BR" />
-  <meta name="theme-color" content="#7c8cf8" />
+  <meta name="theme-color" content="#6f7df6" />
   <style>
     :root {
-      --bg: #f7f9fc;
+      --bg: #f5f7fb;
       --surface: #ffffff;
-      --surface-soft: #eef2ff;
-      --primary: #6c7cf4;
-      --primary-dark: #4f5ed8;
-      --secondary: #7ac7b8;
-      --text: #1f2937;
-      --muted: #5b6473;
-      --border: #dbe3f0;
-      --shadow: 0 12px 30px rgba(31, 41, 55, 0.08);
+      --surface-2: #f0f4ff;
+      --primary: #6f7df6;
+      --primary-dark: #4f5ed6;
+      --accent: #7cc9b8;
+      --text: #1e293b;
+      --muted: #5f6b7a;
+      --border: #dde5f2;
+      --shadow: 0 14px 30px rgba(15, 23, 42, 0.07);
       --radius: 18px;
       --radius-sm: 12px;
-      --max-width: 1180px;
+      --max: 1200px;
     }
 
     * {
@@ -46,16 +46,11 @@
     body {
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
       background:
-        radial-gradient(circle at top left, rgba(108, 124, 244, 0.12), transparent 25%),
-        radial-gradient(circle at top right, rgba(122, 199, 184, 0.12), transparent 28%),
+        radial-gradient(circle at top left, rgba(111, 125, 246, 0.10), transparent 25%),
+        radial-gradient(circle at top right, rgba(124, 201, 184, 0.12), transparent 28%),
         var(--bg);
       color: var(--text);
-      line-height: 1.65;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
+      line-height: 1.6;
     }
 
     a {
@@ -63,365 +58,428 @@
       text-decoration: none;
     }
 
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
     ul {
       list-style: none;
     }
 
     .container {
-      width: min(100% - 2rem, var(--max-width));
+      width: min(100% - 2rem, var(--max));
       margin: 0 auto;
     }
 
     .section {
-      padding: 5rem 0;
+      padding: 4.5rem 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--primary-dark);
+      background: rgba(111, 125, 246, 0.12);
+      padding: 0.45rem 0.8rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+      letter-spacing: 0.01em;
     }
 
     .section-title {
-      font-size: clamp(1.8rem, 2.6vw, 2.6rem);
-      line-height: 1.15;
+      font-size: clamp(1.8rem, 2.8vw, 2.8rem);
+      line-height: 1.1;
+      letter-spacing: -0.04em;
       margin-bottom: 0.9rem;
-      letter-spacing: -0.03em;
     }
 
     .section-subtitle {
       color: var(--muted);
-      max-width: 720px;
-      margin-bottom: 2.2rem;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: var(--primary-dark);
-      background: rgba(108, 124, 244, 0.12);
-      padding: 0.45rem 0.8rem;
-      border-radius: 999px;
-      margin-bottom: 1rem;
+      max-width: 760px;
+      margin-bottom: 2rem;
     }
 
     header {
       position: sticky;
       top: 0;
       z-index: 1000;
+      background: rgba(245, 247, 251, 0.88);
       backdrop-filter: blur(10px);
-      background: rgba(247, 249, 252, 0.86);
-      border-bottom: 1px solid rgba(219, 227, 240, 0.75);
+      border-bottom: 1px solid rgba(221, 229, 242, 0.9);
     }
 
-    .nav {
+    .topbar {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 1rem;
       min-height: 78px;
+      gap: 1rem;
+      padding: 0.8rem 0;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 0.8rem;
-      font-weight: 800;
+      gap: 0.85rem;
       font-size: 1.1rem;
+      font-weight: 900;
       letter-spacing: -0.02em;
     }
 
     .brand-mark {
-      width: 42px;
-      height: 42px;
+      width: 44px;
+      height: 44px;
       border-radius: 14px;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: #fff;
       display: grid;
       place-items: center;
-      color: #fff;
-      font-weight: 800;
       box-shadow: var(--shadow);
+      font-weight: 900;
     }
 
-    .menu {
+    nav ul {
       display: flex;
       align-items: center;
       gap: 1.2rem;
       flex-wrap: wrap;
     }
 
-    .menu a {
+    nav a {
       color: var(--muted);
-      font-weight: 600;
+      font-weight: 700;
       transition: color 0.2s ease;
     }
 
-    .menu a:hover,
-    .menu a:focus {
+    nav a:hover,
+    nav a:focus {
       color: var(--primary-dark);
     }
 
     .hero {
-      padding: 5.5rem 0 4.5rem;
+      padding: 3rem 0 2.5rem;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 2rem;
-      align-items: center;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 1.5rem;
+      align-items: stretch;
     }
 
-    .hero h1 {
-      font-size: clamp(2.4rem, 5vw, 4.3rem);
+    .hero-main {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-image {
+      min-height: 300px;
+      background:
+        linear-gradient(135deg, rgba(79, 94, 214, 0.88), rgba(124, 201, 184, 0.88)),
+        #dfe7ff;
+      position: relative;
+    }
+
+    .hero-image::before {
+      content: "";
+      position: absolute;
+      inset: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 24px;
+    }
+
+    .hero-content {
+      padding: 1.8rem;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(2rem, 4vw, 3.5rem);
       line-height: 1.05;
-      letter-spacing: -0.04em;
+      letter-spacing: -0.05em;
       margin-bottom: 1rem;
-      max-width: 12ch;
+      max-width: 14ch;
     }
 
-    .hero p {
+    .hero-content p {
       color: var(--muted);
-      font-size: 1.05rem;
+      font-size: 1.03rem;
+      margin-bottom: 1.2rem;
       max-width: 62ch;
-      margin-bottom: 1.8rem;
+    }
+
+    .meta {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-bottom: 1rem;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      padding: 0.42rem 0.72rem;
+      border-radius: 999px;
+      background: rgba(111, 125, 246, 0.1);
+      color: var(--primary-dark);
+      font-size: 0.84rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 52px;
-      padding: 0.95rem 1.35rem;
+      min-height: 50px;
+      padding: 0.95rem 1.3rem;
       border-radius: 999px;
+      font-weight: 800;
       border: none;
-      font-weight: 700;
       cursor: pointer;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
       color: #fff;
-      box-shadow: 0 10px 25px rgba(108, 124, 244, 0.28);
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      box-shadow: 0 12px 28px rgba(111, 125, 246, 0.3);
     }
 
     .btn-primary:hover,
     .btn-primary:focus {
       transform: translateY(-2px);
-      box-shadow: 0 16px 32px rgba(108, 124, 244, 0.32);
     }
 
-    .hero-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 1.6rem;
-      box-shadow: var(--shadow);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-card::before {
-      content: "";
-      position: absolute;
-      inset: auto -40px -40px auto;
-      width: 160px;
-      height: 160px;
-      background: radial-gradient(circle, rgba(122, 199, 184, 0.28), transparent 65%);
-      border-radius: 50%;
-    }
-
-    .stat-list {
+    .hero-side {
       display: grid;
       gap: 1rem;
     }
 
-    .stat-item {
-      background: #fbfcff;
+    .side-card {
+      background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      padding: 1rem;
+      border-radius: 20px;
+      padding: 1.2rem;
+      box-shadow: var(--shadow);
     }
 
-    .stat-item strong {
-      display: block;
+    .side-card h3 {
       font-size: 1rem;
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.45rem;
+      line-height: 1.35;
     }
 
-    .stat-item span {
+    .side-card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .news-layout {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    .main-news-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.4rem;
+    }
+
+    .news-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .news-thumb {
+      min-height: 180px;
+      background:
+        linear-gradient(135deg, rgba(111, 125, 246, 0.9), rgba(124, 201, 184, 0.9)),
+        #e8eeff;
+      position: relative;
+    }
+
+    .news-thumb::after {
+      content: "";
+      position: absolute;
+      inset: 16px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .news-content {
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      flex: 1;
+    }
+
+    .news-content h3 {
+      font-size: 1.12rem;
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+    }
+
+    .news-content p {
       color: var(--muted);
       font-size: 0.96rem;
     }
 
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.4rem;
+    .read-more {
+      color: var(--primary-dark);
+      font-weight: 800;
+      margin-top: auto;
     }
 
-    .card {
+    .sidebar-box {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.5rem;
+      border-radius: 20px;
+      padding: 1.25rem;
       box-shadow: var(--shadow);
-      height: 100%;
+      margin-bottom: 1rem;
     }
 
-    .card-icon {
+    .sidebar-box h3 {
+      font-size: 1.05rem;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .list-news {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .list-news li {
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .list-news li:last-child {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .list-news a {
+      font-weight: 700;
+      display: block;
+      margin-bottom: 0.35rem;
+      line-height: 1.35;
+    }
+
+    .list-news span {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.3rem;
+    }
+
+    .highlight-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 1.4rem;
+      box-shadow: var(--shadow);
+    }
+
+    .highlight-icon {
       width: 52px;
       height: 52px;
       border-radius: 14px;
       display: grid;
       place-items: center;
-      background: linear-gradient(135deg, rgba(108, 124, 244, 0.16), rgba(122, 199, 184, 0.18));
+      background: linear-gradient(135deg, rgba(111, 125, 246, 0.15), rgba(124, 201, 184, 0.18));
       color: var(--primary-dark);
-      font-size: 1.3rem;
+      font-size: 1.25rem;
+      font-weight: 900;
       margin-bottom: 1rem;
-      font-weight: 800;
     }
 
-    .card h3 {
-      font-size: 1.15rem;
-      margin-bottom: 0.65rem;
-      letter-spacing: -0.02em;
+    .highlight-card h3 {
+      font-size: 1.08rem;
+      margin-bottom: 0.6rem;
     }
 
-    .card p {
+    .highlight-card p {
       color: var(--muted);
     }
 
     .about-box {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.4rem;
-      align-items: stretch;
-    }
-
-    .about-panel,
-    .about-highlight {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 22px;
-      padding: 1.8rem;
+      border-radius: 24px;
+      padding: 2rem;
       box-shadow: var(--shadow);
-    }
-
-    .about-highlight {
-      background: linear-gradient(180deg, #ffffff, #f4f7ff);
-    }
-
-    .about-list {
       display: grid;
-      gap: 1rem;
-      margin-top: 1rem;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 1.5rem;
     }
 
-    .about-list li {
-      display: flex;
-      gap: 0.8rem;
-      align-items: flex-start;
+    .about-box p {
       color: var(--muted);
     }
 
-    .about-list li::before {
-      content: "•";
-      color: var(--primary);
-      font-weight: 900;
-      font-size: 1.3rem;
-      line-height: 1;
+    .about-points {
+      display: grid;
+      gap: 0.85rem;
     }
 
-    .posts {
+    .about-points div {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1rem;
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .educational-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1.4rem;
+      gap: 1.3rem;
     }
 
-    .post-card {
+    .edu-card {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-    }
-
-    .post-banner {
-      min-height: 160px;
-      background:
-        linear-gradient(135deg, rgba(108, 124, 244, 0.92), rgba(122, 199, 184, 0.9)),
-        #dfe7ff;
-      position: relative;
-    }
-
-    .post-banner::after {
-      content: "";
-      position: absolute;
-      inset: 18px;
-      border: 1px solid rgba(255, 255, 255, 0.32);
       border-radius: 18px;
-    }
-
-    .post-content {
       padding: 1.4rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.8rem;
-      flex: 1;
-    }
-
-    .tag {
-      display: inline-flex;
-      width: fit-content;
-      padding: 0.42rem 0.7rem;
-      border-radius: 999px;
-      background: rgba(108, 124, 244, 0.1);
-      color: var(--primary-dark);
-      font-size: 0.85rem;
-      font-weight: 700;
-    }
-
-    .post-card h3 {
-      font-size: 1.08rem;
-      line-height: 1.3;
-      letter-spacing: -0.02em;
-    }
-
-    .post-card p {
-      color: var(--muted);
-      font-size: 0.97rem;
-    }
-
-    .post-link {
-      margin-top: auto;
-      color: var(--primary-dark);
-      font-weight: 700;
-    }
-
-    .education-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.4rem;
-    }
-
-    .edu-item {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.5rem;
       box-shadow: var(--shadow);
     }
 
-    .edu-item h3 {
-      margin-bottom: 0.7rem;
-      font-size: 1.08rem;
+    .edu-card h3 {
+      font-size: 1.06rem;
+      margin-bottom: 0.65rem;
     }
 
-    .edu-item p {
+    .edu-card p {
       color: var(--muted);
     }
 
-    .faq {
+    .faq-list {
       display: grid;
       gap: 1rem;
     }
@@ -430,14 +488,14 @@
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 16px;
-      padding: 1.15rem 1.2rem;
+      padding: 1.1rem 1.2rem;
       box-shadow: var(--shadow);
     }
 
     .faq-item summary {
-      cursor: pointer;
-      font-weight: 700;
       list-style: none;
+      cursor: pointer;
+      font-weight: 800;
       position: relative;
       padding-right: 1.5rem;
     }
@@ -452,8 +510,7 @@
       right: 0;
       top: 0;
       color: var(--primary-dark);
-      font-size: 1.15rem;
-      line-height: 1;
+      font-size: 1.1rem;
     }
 
     .faq-item[open] summary::after {
@@ -467,8 +524,8 @@
       border-top: 1px solid var(--border);
     }
 
-    .cta-box {
-      background: linear-gradient(135deg, #ffffff, #eef2ff);
+    .cta {
+      background: linear-gradient(135deg, #ffffff, #eef3ff);
       border: 1px solid var(--border);
       border-radius: 28px;
       padding: 2rem;
@@ -480,38 +537,38 @@
       flex-wrap: wrap;
     }
 
-    .cta-box h2 {
+    .cta h2 {
       font-size: clamp(1.6rem, 2.5vw, 2.3rem);
-      line-height: 1.15;
-      letter-spacing: -0.03em;
-      margin-bottom: 0.5rem;
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      margin-bottom: 0.55rem;
     }
 
-    .cta-box p {
+    .cta p {
       color: var(--muted);
       max-width: 60ch;
     }
 
     footer {
-      padding: 2rem 0 3rem;
       border-top: 1px solid var(--border);
+      padding: 2rem 0 3rem;
       margin-top: 2rem;
     }
 
     .footer-grid {
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       gap: 1rem;
       flex-wrap: wrap;
     }
 
     .footer-links {
       display: flex;
-      gap: 1.2rem;
+      gap: 1rem 1.2rem;
       flex-wrap: wrap;
       color: var(--muted);
-      font-weight: 600;
+      font-weight: 700;
     }
 
     .footer-note {
@@ -519,77 +576,69 @@
       font-size: 0.95rem;
     }
 
-    .muted {
-      color: var(--muted);
-    }
-
-    @media (max-width: 980px) {
+    @media (max-width: 1024px) {
       .hero-grid,
+      .news-layout,
       .about-box,
-      .grid-3,
-      .posts,
-      .education-grid {
+      .highlight-grid,
+      .educational-grid {
         grid-template-columns: 1fr;
       }
 
-      .hero h1 {
+      .main-news-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-content h1 {
         max-width: 100%;
-      }
-
-      .nav {
-        flex-direction: column;
-        justify-content: center;
-        padding: 0.9rem 0;
-      }
-
-      .menu {
-        justify-content: center;
-      }
-
-      .section {
-        padding: 4rem 0;
       }
     }
 
-    @media (max-width: 640px) {
+    @media (max-width: 760px) {
+      .topbar {
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      nav ul {
+        justify-content: center;
+      }
+
+      .main-news-grid {
+        grid-template-columns: 1fr;
+      }
+
       .container {
-        width: min(100% - 1.2rem, var(--max-width));
+        width: min(100% - 1.2rem, var(--max));
       }
 
-      .hero {
-        padding: 4.2rem 0 3.5rem;
-      }
-
-      .card,
-      .edu-item,
-      .about-panel,
-      .about-highlight,
-      .post-content,
-      .hero-card {
+      .hero-content,
+      .side-card,
+      .news-content,
+      .sidebar-box,
+      .highlight-card,
+      .edu-card,
+      .about-box,
+      .cta {
         padding: 1.2rem;
       }
 
-      .cta-box {
-        padding: 1.4rem;
-      }
-
-      .menu {
-        gap: 0.8rem 1rem;
-        font-size: 0.95rem;
+      .section {
+        padding: 3.7rem 0;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="container nav">
+    <div class="container topbar">
       <a href="#inicio" class="brand" aria-label="Conexões Reais - Página inicial">
         <span class="brand-mark">CR</span>
         <span>Conexões Reais</span>
       </a>
 
       <nav aria-label="Menu principal">
-        <ul class="menu">
+        <ul>
           <li><a href="#inicio">Início</a></li>
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#conteudos">Conteúdos</a></li>
@@ -603,69 +652,78 @@
   <main>
     <section class="hero" id="inicio">
       <div class="container hero-grid">
-        <div>
-          <span class="eyebrow">Blog educativo para jovens</span>
-          <h1>Entendendo Relações e Bem-estar no Dia a Dia</h1>
-          <p>
-            Um espaço com conteúdos claros, acolhedores e informativos sobre comunicação saudável,
-            respeito nas relações, autoestima e desenvolvimento pessoal. Tudo com linguagem acessível
-            e foco no aprendizado para a vida.
-          </p>
-          <a class="btn btn-primary" href="#conteudos">Explorar conteúdos</a>
-        </div>
-
-        <aside class="hero-card" aria-label="Resumo dos temas do blog">
-          <div class="stat-list">
-            <div class="stat-item">
-              <strong>Comunicação com mais clareza</strong>
-              <span>Aprenda a ouvir, falar com respeito e lidar melhor com diferenças.</span>
+        <article class="hero-main">
+          <div class="hero-image" aria-hidden="true"></div>
+          <div class="hero-content">
+            <span class="tag">Matéria em destaque</span>
+            <div class="meta">
+              <span>Educação e bem-estar</span>
+              <span>Atualizado hoje</span>
+              <span>Leitura rápida</span>
             </div>
-            <div class="stat-item">
-              <strong>Autoestima e confiança</strong>
-              <span>Entenda como fortalecer sua visão sobre si mesmo de forma equilibrada.</span>
-            </div>
-            <div class="stat-item">
-              <strong>Limites e respeito</strong>
-              <span>Reconheça atitudes saudáveis e relações construídas com cuidado mútuo.</span>
-            </div>
+            <h1>Entendendo Relações e Bem-estar no Dia a Dia</h1>
+            <p>
+              Um blog em formato de notícias e artigos educativos para jovens, com informações claras
+              sobre comunicação saudável, autoestima, respeito nas relações e desenvolvimento pessoal.
+              O objetivo é informar com linguagem acessível, visual profissional e conteúdo apropriado
+              para ambiente escolar.
+            </p>
+            <a class="btn btn-primary" href="#conteudos">Explorar conteúdos</a>
           </div>
+        </article>
+
+        <aside class="hero-side" aria-label="Últimas chamadas">
+          <article class="side-card">
+            <span class="tag">Especial</span>
+            <h3>Como conversar com mais respeito no dia a dia</h3>
+            <p>Atitudes simples podem melhorar amizades, relações familiares e convivência na escola.</p>
+          </article>
+
+          <article class="side-card">
+            <span class="tag">Bem-estar</span>
+            <h3>Autoestima e confiança: aprendendo a reconhecer seu valor</h3>
+            <p>Entenda como desenvolver uma visão mais equilibrada e gentil sobre si mesmo.</p>
+          </article>
+
+          <article class="side-card">
+            <span class="tag">Conviver melhor</span>
+            <h3>Respeito e limites: por que isso fortalece relações saudáveis</h3>
+            <p>Conheça princípios importantes para construir relações baseadas em cuidado e empatia.</p>
+          </article>
         </aside>
       </div>
     </section>
 
     <section class="section" aria-labelledby="destaques-titulo">
       <div class="container">
-        <span class="eyebrow">Destaques</span>
-        <h2 class="section-title" id="destaques-titulo">Temas importantes para relações mais saudáveis</h2>
+        <span class="eyebrow">Destaques do portal</span>
+        <h2 class="section-title" id="destaques-titulo">Temas centrais em formato de blog e notícia educativa</h2>
         <p class="section-subtitle">
-          Conteúdos pensados para o ambiente educativo, com foco em convivência, autoconhecimento e bem-estar emocional.
+          Conteúdo organizado como um portal moderno, com chamadas informativas, artigos curtos e seções temáticas.
         </p>
 
-        <div class="grid-3">
-          <article class="card">
-            <div class="card-icon" aria-hidden="true">💬</div>
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <div class="highlight-icon" aria-hidden="true">💬</div>
             <h3>Comunicação saudável</h3>
             <p>
-              Conversar com honestidade, escutar com atenção e saber expressar sentimentos são habilidades
-              que ajudam em amizades, família e rotina escolar.
+              Aprenda a ouvir melhor, falar com clareza e construir conversas mais respeitosas.
             </p>
           </article>
 
-          <article class="card">
-            <div class="card-icon" aria-hidden="true">🌱</div>
+          <article class="highlight-card">
+            <div class="highlight-icon" aria-hidden="true">🌿</div>
             <h3>Autoestima</h3>
             <p>
-              Desenvolver autoestima envolve reconhecer qualidades, aceitar desafios e cuidar da forma
-              como você fala consigo mesmo.
+              Descubra hábitos e reflexões que ajudam no autoconhecimento e na confiança pessoal.
             </p>
           </article>
 
-          <article class="card">
-            <div class="card-icon" aria-hidden="true">🤝</div>
+          <article class="highlight-card">
+            <div class="highlight-icon" aria-hidden="true">🤝</div>
             <h3>Respeito e limites</h3>
             <p>
-              Relações saudáveis incluem consideração, empatia e a compreensão de que cada pessoa tem
-              sentimentos, escolhas e limites.
+              Entenda por que relações saudáveis envolvem empatia, consideração e responsabilidade.
             </p>
           </article>
         </div>
@@ -673,108 +731,179 @@
     </section>
 
     <section class="section" id="sobre" aria-labelledby="sobre-titulo">
-      <div class="container about-box">
-        <div class="about-panel">
-          <span class="eyebrow">Sobre o blog</span>
-          <h2 class="section-title" id="sobre-titulo">Um espaço educativo para aprender com leveza</h2>
-          <p class="muted">
-            O Conexões Reais foi criado para oferecer conteúdos confiáveis e acessíveis sobre relações
-            saudáveis, autoestima e bem-estar emocional. A proposta é ajudar jovens a refletirem sobre
-            convivência, respeito, escuta e desenvolvimento pessoal em diferentes contextos do dia a dia.
-          </p>
-        </div>
-
-        <div class="about-highlight">
-          <h3 style="margin-bottom: 0.8rem; font-size: 1.2rem;">Nosso objetivo educativo</h3>
-          <ul class="about-list">
-            <li>Promover conversas respeitosas e mais conscientes no ambiente escolar e fora dele.</li>
-            <li>Apresentar conceitos de forma clara, sem exageros e com linguagem acolhedora.</li>
-            <li>Incentivar o autoconhecimento, a empatia e a construção de relações equilibradas.</li>
-          </ul>
+      <div class="container">
+        <div class="about-box">
+          <div>
+            <span class="eyebrow">Sobre o Conexões Reais</span>
+            <h2 class="section-title" id="sobre-titulo">Um blog educativo com visual de portal de notícias</h2>
+            <p>
+              O Conexões Reais foi pensado para funcionar como uma página estilo blog/notícia, com
+              organização editorial, destaques e conteúdos acessíveis. O foco é oferecer informação
+              confiável e respeitosa para jovens sobre autoestima, comunicação saudável, respeito nas
+              relações e bem-estar emocional.
+            </p>
+          </div>
+          <div class="about-points">
+            <div>Conteúdo leve, educativo e apropriado para ambiente escolar.</div>
+            <div>Textos claros, sem exageros, sem sensacionalismo e com linguagem acessível.</div>
+            <div>Design moderno, limpo, responsivo e pronto para publicação na Vercel.</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="conteudos" aria-labelledby="artigos-titulo">
+    <section class="section" id="conteudos" aria-labelledby="conteudos-titulo">
       <div class="container">
-        <span class="eyebrow">Artigos</span>
-        <h2 class="section-title" id="artigos-titulo">Leituras para refletir e aprender</h2>
+        <span class="eyebrow">Conteúdos e notícias</span>
+        <h2 class="section-title" id="conteudos-titulo">Últimos artigos e chamadas educativas</h2>
         <p class="section-subtitle">
-          Exemplos de conteúdos que podem ajudar a entender melhor a convivência, a autoestima e o respeito nas relações.
+          Uma estrutura com notícias em destaque, artigos principais e bloco lateral para navegação rápida.
         </p>
 
-        <div class="posts">
-          <article class="post-card">
-            <div class="post-banner" aria-hidden="true"></div>
-            <div class="post-content">
-              <span class="tag">Comunicação</span>
-              <h3>Como melhorar a comunicação com outras pessoas</h3>
-              <p>
-                Pequenas mudanças na forma de ouvir e responder podem tornar as conversas mais claras e respeitosas.
-              </p>
-              <a href="#faq" class="post-link">Ler mais</a>
-            </div>
-          </article>
+        <div class="news-layout">
+          <div class="main-news-grid">
+            <article class="news-card">
+              <div class="news-thumb" aria-hidden="true"></div>
+              <div class="news-content">
+                <span class="tag">Comunicação</span>
+                <div class="meta">
+                  <span>Artigo</span>
+                  <span>5 min de leitura</span>
+                </div>
+                <h3>Como melhorar a comunicação com outras pessoas</h3>
+                <p>
+                  Conversas mais claras começam com escuta ativa, respeito e atenção ao que está sendo sentido e dito.
+                </p>
+                <a href="#faq" class="read-more">Continuar lendo</a>
+              </div>
+            </article>
 
-          <article class="post-card">
-            <div class="post-banner" aria-hidden="true"></div>
-            <div class="post-content">
-              <span class="tag">Relações saudáveis</span>
-              <h3>Sinais de relações saudáveis</h3>
-              <p>
-                Confiança, respeito, diálogo e apoio são elementos que costumam aparecer em relações equilibradas.
-              </p>
-              <a href="#educativa" class="post-link">Ler mais</a>
-            </div>
-          </article>
+            <article class="news-card">
+              <div class="news-thumb" aria-hidden="true"></div>
+              <div class="news-content">
+                <span class="tag">Relações saudáveis</span>
+                <div class="meta">
+                  <span>Matéria</span>
+                  <span>Leitura educativa</span>
+                </div>
+                <h3>Sinais de relações saudáveis no dia a dia</h3>
+                <p>
+                  Respeito, confiança, diálogo e apoio são aspectos importantes em relações equilibradas.
+                </p>
+                <a href="#educativa" class="read-more">Continuar lendo</a>
+              </div>
+            </article>
 
-          <article class="post-card">
-            <div class="post-banner" aria-hidden="true"></div>
-            <div class="post-content">
-              <span class="tag">Respeito</span>
-              <h3>A importância do respeito mútuo</h3>
-              <p>
-                Respeitar o outro é reconhecer diferenças, ouvir opiniões e agir com consideração no cotidiano.
-              </p>
-              <a href="#sobre" class="post-link">Ler mais</a>
-            </div>
-          </article>
+            <article class="news-card">
+              <div class="news-thumb" aria-hidden="true"></div>
+              <div class="news-content">
+                <span class="tag">Respeito</span>
+                <div class="meta">
+                  <span>Especial</span>
+                  <span>Guia rápido</span>
+                </div>
+                <h3>A importância do respeito mútuo</h3>
+                <p>
+                  Conviver bem envolve reconhecer diferenças, escutar opiniões e agir com responsabilidade.
+                </p>
+                <a href="#sobre" class="read-more">Continuar lendo</a>
+              </div>
+            </article>
 
-          <article class="post-card">
-            <div class="post-banner" aria-hidden="true"></div>
-            <div class="post-content">
-              <span class="tag">Autoestima</span>
-              <h3>Como fortalecer a autoestima de forma saudável</h3>
-              <p>
-                A autoestima cresce com autoconhecimento, hábitos de cuidado e relações que valorizam quem você é.
-              </p>
-              <a href="#cta" class="post-link">Ler mais</a>
-            </div>
-          </article>
+            <article class="news-card">
+              <div class="news-thumb" aria-hidden="true"></div>
+              <div class="news-content">
+                <span class="tag">Autoestima</span>
+                <div class="meta">
+                  <span>Blog</span>
+                  <span>Reflexão</span>
+                </div>
+                <h3>Como fortalecer a autoestima de forma saudável</h3>
+                <p>
+                  Valorizar pequenas conquistas e reconhecer qualidades ajuda no desenvolvimento pessoal.
+                </p>
+                <a href="#cta" class="read-more">Continuar lendo</a>
+              </div>
+            </article>
 
-          <article class="post-card">
-            <div class="post-banner" aria-hidden="true"></div>
-            <div class="post-content">
-              <span class="tag">Bem-estar</span>
-              <h3>Bem-estar emocional na rotina escolar</h3>
-              <p>
-                Organizar emoções, buscar apoio e manter equilíbrio pode fazer diferença no aprendizado e na convivência.
-              </p>
-              <a href="#faq" class="post-link">Ler mais</a>
-            </div>
-          </article>
+            <article class="news-card">
+              <div class="news-thumb" aria-hidden="true"></div>
+              <div class="news-content">
+                <span class="tag">Bem-estar</span>
+                <div class="meta">
+                  <span>Notícia educativa</span>
+                  <span>Leitura leve</span>
+                </div>
+                <h3>Bem-estar emocional na rotina escolar</h3>
+                <p>
+                  Organizar emoções e buscar apoio pode contribuir para a aprendizagem e a convivência.
+                </p>
+                <a href="#faq" class="read-more">Continuar lendo</a>
+              </div>
+            </article>
 
-          <article class="post-card">
-            <div class="post-banner" aria-hidden="true"></div>
-            <div class="post-content">
-              <span class="tag">Desenvolvimento pessoal</span>
-              <h3>Pequenas atitudes para crescer com mais confiança</h3>
-              <p>
-                Estabelecer metas simples, reconhecer avanços e aprender com erros faz parte do desenvolvimento pessoal.
-              </p>
-              <a href="#educativa" class="post-link">Ler mais</a>
+            <article class="news-card">
+              <div class="news-thumb" aria-hidden="true"></div>
+              <div class="news-content">
+                <span class="tag">Desenvolvimento pessoal</span>
+                <div class="meta">
+                  <span>Artigo curto</span>
+                  <span>Leitura prática</span>
+                </div>
+                <h3>Pequenas atitudes para crescer com mais confiança</h3>
+                <p>
+                  Criar metas simples, revisar aprendizados e seguir em frente faz parte de um crescimento saudável.
+                </p>
+                <a href="#educativa" class="read-more">Continuar lendo</a>
+              </div>
+            </article>
+          </div>
+
+          <aside>
+            <div class="sidebar-box">
+              <h3>Mais lidas</h3>
+              <ul class="list-news">
+                <li>
+                  <a href="#conteudos">Como lidar com diferenças de opinião com respeito</a>
+                  <span>Comunicação e convivência</span>
+                </li>
+                <li>
+                  <a href="#conteudos">Autoestima: por que comparações nem sempre ajudam</a>
+                  <span>Desenvolvimento pessoal</span>
+                </li>
+                <li>
+                  <a href="#conteudos">Limites saudáveis em amizades e relações</a>
+                  <span>Respeito e equilíbrio</span>
+                </li>
+                <li>
+                  <a href="#conteudos">Escuta ativa: habilidade importante para o dia a dia</a>
+                  <span>Relações mais claras</span>
+                </li>
+              </ul>
             </div>
-          </article>
+
+            <div class="sidebar-box">
+              <h3>Editorias</h3>
+              <ul class="list-news">
+                <li>
+                  <a href="#conteudos">Comunicação saudável</a>
+                  <span>Dicas, reflexões e orientações educativas</span>
+                </li>
+                <li>
+                  <a href="#conteudos">Autoestima</a>
+                  <span>Autoconhecimento e valorização pessoal</span>
+                </li>
+                <li>
+                  <a href="#conteudos">Respeito e limites</a>
+                  <span>Convivência equilibrada</span>
+                </li>
+                <li>
+                  <a href="#conteudos">Bem-estar emocional</a>
+                  <span>Cuidados com emoções e rotina</span>
+                </li>
+              </ul>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
@@ -782,33 +911,30 @@
     <section class="section" id="educativa" aria-labelledby="educativa-titulo">
       <div class="container">
         <span class="eyebrow">Seção educativa</span>
-        <h2 class="section-title" id="educativa-titulo">Conceitos básicos explicados com clareza</h2>
+        <h2 class="section-title" id="educativa-titulo">Conceitos básicos explicados de forma simples</h2>
         <p class="section-subtitle">
-          Entender alguns fundamentos pode ajudar bastante na construção de relações mais respeitosas e conscientes.
+          Um bloco didático para complementar as matérias e ajudar na compreensão dos temas centrais do portal.
         </p>
 
-        <div class="education-grid">
-          <article class="edu-item">
-            <h3>1. Comunicação não é apenas falar</h3>
+        <div class="educational-grid">
+          <article class="edu-card">
+            <h3>1. Comunicação envolve ouvir e responder</h3>
             <p>
-              Comunicar bem também envolve escutar, prestar atenção no contexto e escolher palavras que expressem
-              ideias de forma respeitosa.
+              Uma conversa saudável não depende só de falar, mas também de escutar com atenção e empatia.
             </p>
           </article>
 
-          <article class="edu-item">
-            <h3>2. Limites são parte do cuidado</h3>
+          <article class="edu-card">
+            <h3>2. Limites ajudam a proteger o bem-estar</h3>
             <p>
-              Ter limites e respeitar os limites de outras pessoas ajuda a criar relações mais seguras, equilibradas
-              e baseadas em confiança.
+              Saber dizer o que é confortável ou não fortalece relações mais claras e respeitosas.
             </p>
           </article>
 
-          <article class="edu-item">
-            <h3>3. Autoestima se constrói aos poucos</h3>
+          <article class="edu-card">
+            <h3>3. Autoestima se desenvolve com prática</h3>
             <p>
-              Ela não depende de perfeição. Cresce com autoconhecimento, apoio, prática de hábitos saudáveis e visão
-              mais gentil sobre si mesmo.
+              Reconhecer qualidades, aprender com erros e evitar comparações exageradas pode fazer diferença.
             </p>
           </article>
         </div>
@@ -817,45 +943,45 @@
 
     <section class="section" id="faq" aria-labelledby="faq-titulo">
       <div class="container">
-        <span class="eyebrow">FAQ</span>
-        <h2 class="section-title" id="faq-titulo">Perguntas comuns sobre relacionamento e bem-estar</h2>
+        <span class="eyebrow">Perguntas frequentes</span>
+        <h2 class="section-title" id="faq-titulo">Dúvidas comuns sobre relações e bem-estar</h2>
         <p class="section-subtitle">
-          Respostas breves e educativas para dúvidas frequentes entre jovens.
+          Respostas objetivas em estilo editorial, pensadas para leitura rápida e fácil compreensão.
         </p>
 
-        <div class="faq">
+        <div class="faq-list">
           <details class="faq-item">
-            <summary>O que é uma comunicação saudável?</summary>
+            <summary>O que é comunicação saudável?</summary>
             <p>
-              É uma forma de conversar com clareza, respeito e escuta ativa, sem desvalorizar sentimentos ou opiniões.
+              É a prática de conversar com clareza, respeito e escuta ativa, valorizando o diálogo e os sentimentos envolvidos.
             </p>
           </details>
 
           <details class="faq-item">
-            <summary>Como perceber se uma relação é saudável?</summary>
+            <summary>Como reconhecer uma relação saudável?</summary>
             <p>
-              Relações saudáveis costumam incluir respeito, confiança, apoio, diálogo e espaço para cada pessoa ser quem é.
+              Em geral, ela inclui confiança, respeito, apoio, honestidade e espaço para que cada pessoa mantenha sua individualidade.
             </p>
           </details>
 
           <details class="faq-item">
-            <summary>Ter limites significa ser distante?</summary>
+            <summary>Por que limites são importantes?</summary>
             <p>
-              Não. Limites ajudam a proteger o bem-estar e tornam a convivência mais clara, equilibrada e respeitosa.
+              Porque ajudam a proteger o bem-estar, evitam desconfortos e tornam a convivência mais equilibrada.
             </p>
           </details>
 
           <details class="faq-item">
-            <summary>Como cuidar melhor da autoestima?</summary>
+            <summary>Como desenvolver a autoestima com equilíbrio?</summary>
             <p>
-              Reconheça suas qualidades, evite comparações excessivas e valorize pequenos avanços no seu processo pessoal.
+              Reconhecendo avanços, cuidando da forma como você fala consigo mesmo e valorizando seu processo pessoal.
             </p>
           </details>
 
           <details class="faq-item">
-            <summary>Por que o bem-estar emocional é importante?</summary>
+            <summary>O bem-estar emocional influencia a rotina?</summary>
             <p>
-              Porque ele influencia a forma como lidamos com desafios, convivemos com outras pessoas e cuidamos de nós mesmos.
+              Sim. Ele pode impactar a forma de estudar, conviver, resolver desafios e manter relações mais saudáveis.
             </p>
           </details>
         </div>
@@ -864,15 +990,15 @@
 
     <section class="section" id="cta" aria-labelledby="cta-titulo">
       <div class="container">
-        <div class="cta-box">
+        <div class="cta">
           <div>
-            <span class="eyebrow">Continue aprendendo</span>
-            <h2 id="cta-titulo">Conhecimento e reflexão ajudam a construir conexões melhores</h2>
+            <span class="eyebrow">Continue explorando</span>
+            <h2 id="cta-titulo">Aprender sobre relações saudáveis também faz parte do crescimento</h2>
             <p>
-              Aprender sobre respeito, autoestima e convivência é um passo importante para relações mais saudáveis no presente e no futuro.
+              Conhecimento, reflexão e boas conversas podem ajudar a construir conexões mais respeitosas e conscientes.
             </p>
           </div>
-          <a class="btn btn-primary" href="#inicio">Voltar ao início</a>
+          <a href="#inicio" class="btn btn-primary">Voltar ao topo</a>
         </div>
       </div>
     </section>
@@ -880,7 +1006,7 @@
 
   <footer id="contato">
     <div class="container footer-grid">
-      <p class="footer-note">© 2026 Conexões Reais. Conteúdo educativo e informativo.</p>
+      <p class="footer-note">© 2026 Conexões Reais. Blog educativo em formato de notícias e artigos.</p>
       <nav aria-label="Links do rodapé">
         <ul class="footer-links">
           <li><a href="#">Política de Privacidade</a></li>
